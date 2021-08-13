@@ -32,7 +32,7 @@ NOTE: Aggregate creation is part of the automation.
 2. The user should have an Ansible Control machine that has network reachability to the ONTAP storage system and internet access to pull this repository from GitHub.
 Refer https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html for guidance on setting up an Ansible Control machine.
 
-3. The Ansible control machine should have the NetApp and VMware dependency libraries and collections installed
+3. The Ansible control machine should have the NetApp libraries and collections installed
 
 ```
 pip3 install netapp-lib
