@@ -205,7 +205,7 @@ svm_specs:
     - {name: VM-Host-Infra-01-FCP, wwpn: ["20:00:00:25:B5:32:0A:00","20:00:00:25:B5:32:0B:00"]}
     - {name: VM-Host-Infra-02-FCP, wwpn: ["20:00:00:25:B5:32:0A:01","20:00:00:25:B5:32:0B:01"]}
   svm_mgmt_lif: {home_node: node-01, home_port: e0M, address: 192.168.20.18, netmask: 255.255.255.0, gateway: 192.168.20.1, lif_name: infra_svm_mgmt}
-  vsadmin_password: NetApp!23
+  vsadmin_password: <password>
   os_type: vmware
   dns_server_svm:
     - 192.168.20.20
