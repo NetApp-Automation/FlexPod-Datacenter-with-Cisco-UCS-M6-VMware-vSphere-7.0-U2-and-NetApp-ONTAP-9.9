@@ -26,6 +26,7 @@ As the automation solution is specifically build for the above mentioned CVD, th
 ### Prerequisite
 
 1. It is assumed that the physical rack and stack, power-on, initialisation of ONTAP OS, setup of Node Management IPs and initial ONTAP Cluster with IP is completed.
+
 NOTE: Aggregate creation is part of the automation.
 
 2. The user should have an Ansible Control machine that has network reachability to the ONTAP storage system and internet access to pull this repository from GitHub.
