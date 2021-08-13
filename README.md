@@ -13,10 +13,6 @@ The ONTAP deployment automation is based on the following roles:
 	ontap_nvme
 	ontap_finalize_setup
 
-The ONTAP Tools (previously VSC) deployment is based on the following role:
-
-	ontap_tools-config
-
 These roles are developed as per the best practices prescribed in the Cisco Validated Design (CVD) "FlexPod Datacenter with Cisco UCS M6, VMware 7.0 U2 and NetApp ONTAP 9.9".
 
 ### Environment Validated
@@ -40,9 +36,6 @@ Refer https://docs.ansible.com/ansible/latest/installation_guide/intro_installat
 ```
 pip3 install netapp-lib
 ansible-galaxy collection install netapp.ontap
-pip3 install pyvmomi
-ansible-galaxy collection install community.vmware
-pip3 install -r ~/.ansible/collections/ansible_collections/community/vmware/requirements.txt
 ```
 
 ### Getting Started
@@ -53,13 +46,13 @@ pip3 install -r ~/.ansible/collections/ansible_collections/community/vmware/requ
 git clone https://github.com/NetApp-Automation/FlexPod-Datacenter-with-Cisco-UCS-M6-VMware-7.0-U2-and-NetApp-ONTAP-9.9
 ```
 
-2. There are two variable files under the vars folder 'ontap_main.yml' for setup of ONTAP and 'ontap_tools_main.yml' for setup of ONTAP tools, that need to be filled out with environment specific parameters prior to executing the playbook.
+2. There is a variable file under the vars folder 'ontap_main.yml' for setup of ONTAP, that needs to be filled out with environment specific parameters prior to executing the playbook.
 
 NOTE: The format of the variable file needs to be maintained as it is, any changes to the structure of the file may lead to failure in execution of the playbook.
 
 NOTE: Sample values are pre-populated against some variables in order to provide the user additional clarity on how the variable needs to be filled out. Please replace the sample values with your environment specific information.
 
-3. Update the credentials for the ONTAP Cluster and VMware vCenter
+3. Update the credentials for the ONTAP Cluster
 
 Navigate to the 'ontap' file within the 'group_vars' directory and update it with the admin credentials for the ONTAP cluster 
 
@@ -69,17 +62,9 @@ Example -
 	username: admin
 	password: password
 
-Navigate to the 'vcenter' file within the 'group_vars' directory and update it with the admin credentials for VMware vCenter
-
-Example -
-
-	# This variable file is used by the playbooks for the ONTAP tools
-	vcenter_username: "administrator@vsphere.local"
-	vcenter_password: "password"
-
 4. Update the Inventory file
 
-Open the 'hosts' file and update it with a record for the ONTAP Cluster Management IP and vCenter IP
+Open the 'hosts' file and update it with a record for the ONTAP Cluster Management IP
 
 Example -
 
@@ -87,10 +72,6 @@ Example -
 	[ontap]
 	# ONTAP Cluster Management IP, list only one ONTAP Cluster IP
 	192.168.10.5
-
-	[vcenter]
-	# vCenter Management IP. List only one vCenter IP. This is used by the playbooks for ONTAP tools.
-	192.168.10.10
 
 5. Executing the Playbook
 
@@ -112,9 +93,8 @@ If you would like to run a part of the deployment, you may use the appropriate t
 
 	ansible-playbook -i inventory Setup_ONTAP.yml -t <tag_name>
 	
-Another playbokk by name 'Setup_ONTAP_tools' is available at the root of this repository. It call the appropriate roles to complete the setup of ONTAP Tools for VMware. 
-
-	ansible-playbook -i inventory Setup_ONTAP_tools.yml
+If you would like to deploy NetApp ONTAP Tools for VMware vSphere via Ansible, you can find the associated playbook and roles here -
+https://github.com/NetApp-Automation/ONTAP-Tools-for-VMware-vSphere
 
 ### Authors
 
