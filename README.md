@@ -44,7 +44,7 @@ ansible-galaxy collection install netapp.ontap
 1. From the Ansible Control machine Download a ZIP version of this repository or clone it using the below command:
 	
 ```
-git clone https://github.com/NetApp-Automation/FlexPod-Datacenter-with-Cisco-UCS-M6-VMware-7.0-U2-and-NetApp-ONTAP-9.9
+git clone https://github.com/NetApp-Automation/FlexPod-Datacenter-with-Cisco-UCS-M6-VMware-7.0-U2-and-NetApp-ONTAP-9.9.git
 ```
 
 2. There is a variable file under the vars folder 'ontap_main.yml' for setup of ONTAP, that needs to be filled out with environment specific parameters prior to executing the playbook.
