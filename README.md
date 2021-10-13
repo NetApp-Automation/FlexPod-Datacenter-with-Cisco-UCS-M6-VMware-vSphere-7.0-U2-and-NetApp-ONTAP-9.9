@@ -15,6 +15,8 @@ The ONTAP deployment automation is based on the following roles:
 
 These roles are developed as per the best practices prescribed in the Cisco Validated Design (CVD) "FlexPod Datacenter with Cisco UCS 4.2(1) in UCS Managed Mode, VMware vSphere 7.0 U2, and NetApp ONTAP 9.9" https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_m6_esxi7u2.html.
 
+The end-to-end automation package for this solution is available here - https://github.com/ucs-compute-solutions/FlexPod-UCSM-M6
+
 ### Environment Validated
 
 As the automation solution is specifically build for the above mentioned CVD, the current roles and playbooks support the following components:
