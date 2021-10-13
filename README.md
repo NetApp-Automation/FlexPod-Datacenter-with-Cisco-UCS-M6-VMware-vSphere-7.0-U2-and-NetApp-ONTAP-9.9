@@ -13,7 +13,7 @@ The ONTAP deployment automation is based on the following roles:
 	ontap_nvme
 	ontap_finalize_setup
 
-These roles are developed as per the best practices prescribed in the Cisco Validated Design (CVD) "FlexPod Datacenter with Cisco UCS M6, VMware 7.0 U2 and NetApp ONTAP 9.9".
+These roles are developed as per the best practices prescribed in the Cisco Validated Design (CVD) "FlexPod Datacenter with Cisco UCS 4.2(1) in UCS Managed Mode, VMware vSphere 7.0 U2, and NetApp ONTAP 9.9" https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_m6_esxi7u2.html.
 
 ### Environment Validated
 
