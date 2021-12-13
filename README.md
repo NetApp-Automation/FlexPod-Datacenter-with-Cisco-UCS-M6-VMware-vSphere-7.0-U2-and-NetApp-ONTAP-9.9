@@ -94,7 +94,7 @@ Execute the playbook from the Ansible Control machine as an admin/ root user usi
 
 If you would like to run a part of the deployment, you may use the appropriate tag that accompanies each task in the role and run the playbook in the below fashion -
 
-	ansible-playbook -i inventory Setup_ONTAP.yml -t <tag_name>
+	ansible-playbook -i hosts Setup_ONTAP.yml -t <tag_name>
 	
 If you would like to deploy NetApp ONTAP Tools for VMware vSphere via Ansible, you can find the associated playbook and roles here -
 https://github.com/NetApp-Automation/ONTAP-Tools-for-VMware-vSphere
